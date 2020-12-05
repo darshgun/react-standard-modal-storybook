@@ -1,0 +1,27 @@
+{
+  "name": "react-standard-modal-storybook",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-standard-modal": "0.1.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addon-viewport": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/preset-create-react-app": "^2.1.1",
+    "@storybook/react": "^5.3.19",
+    "babel-loader": "^8.1.0",
+    "react-scripts": "3.4.1"
+  },
+  "keywords": []
+}
