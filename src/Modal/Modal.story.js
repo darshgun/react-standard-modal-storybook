@@ -9,30 +9,23 @@ export default {
   component: Modal
 };
 
-const props = {
-  all: () => ({
+export const Usage = () => {
+  const [isOpen, setIsOpen] = useState(true);
+  const props = {
     closeOnOverlayClick: boolean("closeOnOverlayClick", false),
     disableOverlayClick: boolean("disableOverlayClick", false),
     disableOverlay: boolean("disableOverlay", false),
     disablePortal: boolean("disablePortal", false),
     unMountIfClosed: boolean("unMountIfClosed", false),
     overlayClick: action("Clicked on overlay")
-  })
-};
-
-export const Usage = () => {
-  const allProps = props.all;
-  const [isOpen, setIsOpen] = useState(true);
+  };
 
   const handleOpen = () => {
     setIsOpen(true);
-    console.log("props", allProps);
-    action("Modal is open");
   };
 
   const handleClose = () => {
     setIsOpen(false);
-    action("Modal is closed");
   };
 
   return (
@@ -45,7 +38,7 @@ export const Usage = () => {
         Open modal
       </Button>
       <Modal
-        {...allProps}
+        {...props}
         /**
          * Custom class names
          */
@@ -56,7 +49,7 @@ export const Usage = () => {
         onClose={handleClose}
         onOpen={handleOpen}
         open={isOpen}
-        // closeOnOverlayClick={boolean("closeOnOverlayClick", false)}
+        closeOnOverlayClick={() => handleClose()}
         /**
          * Custom styles
          */
